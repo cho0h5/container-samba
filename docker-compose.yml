@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+    samba:
+        ports:
+            - "445:445"
+        restart: always
+        volumes:
+            - ${SMB_DATAPATH}:/samba/data
+        environment:
+            SMB_USERNAME: ${SMB_USERNAME}
+            SMB_USERPASSWD: ${SMB_USERPASSWD}
+        image: cho0h5/samba
