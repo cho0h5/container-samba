@@ -6,6 +6,7 @@ cat << EOF > .env
 SMB_USERNAME=yourname
 SMB_USERPASSWD=yourpasswd
 SMB_DATAPATH=/your/path
+SMB_PORT=445
 EOF
 ```
 2. launch
