@@ -1,12 +1,13 @@
-version: "3.9"
+version: "3"
 services:
     samba:
         ports:
             - "${SMB_PORT}:445"
         restart: always
         volumes:
-            - ${SMB_DATAPATH}:/samba/data
+            - ${SMB_SSFORKLIFT_DATAPATH}:/media/ssforklift
+            - ${SMB_YOUNGHO_DATAPATH}:/media/youngho
         environment:
-            SMB_USERNAME: ${SMB_USERNAME}
-            SMB_USERPASSWD: ${SMB_USERPASSWD}
-        image: cho0h5/samba
+            SMB_SSFORKLIFT_PASSWORD: ${SMB_SSFORKLIFT_PASSWORD}
+            SMB_YOUNGHO_PASSWORD: ${SMB_YOUNGHO_PASSWORD}
+        image: cho0h5/samba-personal
