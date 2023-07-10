@@ -9,4 +9,6 @@ services:
         environment:
             SMB_USERNAME: ${SMB_USERNAME}
             SMB_USERPASSWD: ${SMB_USERPASSWD}
+            SMB_UID: ${SMB_UID}
+            SMB_GID: ${SMB_GID}
         image: cho0h5/samba
